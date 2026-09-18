@@ -1,0 +1,20 @@
+{
+  "name": "spiderman-register-vue",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "description": "蜘蛛侠觉醒身份注册页 - Vue 3 + Vite 重构版",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "vue": "^3.4.21",
+    "vue-router": "^4.6.4"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-vue": "^5.0.4",
+    "vite": "^5.2.0"
+  }
+}

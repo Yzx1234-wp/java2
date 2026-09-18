@@ -1,0 +1,79 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --red: #e23636;
+  --red-dark: #b71c1c;
+  --blue: #1565c0;
+  --blue-dark: #0d2b54;
+  --web: rgba(255, 255, 255, 0.1);
+  --ink: #f3f5fb;
+  --muted: #aab4c8;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  font-family: -apple-system, "PingFang SC", "Microsoft YaHei", "Segoe UI", sans-serif;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background:
+    radial-gradient(circle at 20% 20%, rgba(226, 54, 54, 0.25), transparent 45%),
+    radial-gradient(circle at 80% 80%, rgba(21, 101, 192, 0.3), transparent 45%),
+    #0a0f1e;
+  color: var(--ink);
+  overflow: hidden;
+  position: relative;
+}
+
+/* 全屏蛛网背景 */
+.webs {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  opacity: 0.5;
+  z-index: 0;
+}
+
+.webs::before,
+.webs::after {
+  content: "";
+  position: absolute;
+  width: 520px;
+  height: 520px;
+  background-image: repeating-conic-gradient(
+    from 0deg at 0 0,
+    transparent 0 14deg,
+    var(--web) 14deg 15deg
+  );
+  -webkit-mask: radial-gradient(circle at 0 0, #000 60%, transparent 72%);
+  mask: radial-gradient(circle at 0 0, #000 60%, transparent 72%);
+}
+
+.webs::before {
+  top: -160px;
+  left: -160px;
+}
+
+.webs::after {
+  bottom: -160px;
+  right: -160px;
+  transform: rotate(180deg);
+}
+
+/* 全局滚动条美化（表单区可滚动） */
+.form::-webkit-scrollbar {
+  width: 6px;
+}
+.form::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.16);
+  border-radius: 6px;
+}
