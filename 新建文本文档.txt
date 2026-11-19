@@ -7,7 +7,7 @@ struct Index {
 
   build() {
     Column() {
-
+      /*顶部固定盒子*/
       Row() {
         Text('起点中文网')
           .fontColor(Color.Brown)
@@ -31,14 +31,15 @@ struct Index {
       .justifyContent(FlexAlign.SpaceBetween)
       .width('100%')
       .height('6%')
-      .backgroundColor(Color.Pink)
-
+      .backgroundColor(Color.White)
+      /*长页面滚动盒子*/
       Scroll() {
 
         Column() {
 
           Search()
             .width('100%')
+          /*轮播图*/
           Swiper() {
             Image(
               'https://bossaudioandcomic-1252317822.image.myqcloud.com/activity/document/b4a86ed4badfa4d27dd59de2d9f0dea9.jpg')
@@ -57,7 +58,7 @@ struct Index {
           .width('100%')
           .autoPlay(true)
           .interval(2000)
-
+          /*分类区域*/
           List({ space: 15 }) {
             ListItem() {
               Column() {
@@ -68,37 +69,37 @@ struct Index {
             }
             ListItem() {
               Column() {
-                Image('https://imgservices-1252317822.image.myqcloud.com/coco/s09082023/c120ddc7.66tydz.png')
+                Image('https://imgservices-1252317822.image.myqcloud.com/coco/s09082023/c6673b84.zuil3k.png')
                   .width('18%')
-                Text('分类')
+                Text('排行榜')
               }
             }
             ListItem() {
               Column() {
-                Image('https://imgservices-1252317822.image.myqcloud.com/coco/s09082023/c120ddc7.66tydz.png')
+                Image('https://imgservices-1252317822.image.myqcloud.com/coco/s09082023/ccc9e198.hh0sph.png')
                   .width('18%')
-                Text('分类')
+                Text('免费')
               }
             }
             ListItem() {
               Column() {
-                Image('https://imgservices-1252317822.image.myqcloud.com/coco/s09082023/c120ddc7.66tydz.png')
+                Image('https://imgservices-1252317822.image.myqcloud.com/coco/s09082023/403e0032.vfw574.png')
                   .width('18%')
-                Text('分类')
+                Text('完本')
               }
             }
             ListItem() {
               Column() {
-                Image('https://imgservices-1252317822.image.myqcloud.com/coco/s09082023/c120ddc7.66tydz.png')
+                Image('https://imgservices-1252317822.image.myqcloud.com/coco/s09082023/8d57d2fc.rmfht6.png')
                   .width('18%')
-                Text('分类')
+                Text('大神')
               }
             }
             ListItem() {
               Column() {
-                Image('https://imgservices-1252317822.image.myqcloud.com/coco/s09082023/c120ddc7.66tydz.png')
+                Image('https://imgservices-1252317822.image.myqcloud.com/coco/s09082023/1ca7c55a.h69hv4.png')
                   .width('18%')
-                Text('分类')
+                Text('书单')
               }
             }
 
@@ -109,7 +110,7 @@ struct Index {
           .borderRadius(10)
           .margin({ top: 15 })
           .backgroundColor(Color.White)
-
+          /*下载盒子区域*/
           Row(){
             Text('起点')
               .fontSize(21)
@@ -118,7 +119,7 @@ struct Index {
               .borderRadius(10)
               .fontColor(Color.White)
               .fontWeight(FontWeight.Bold)
-
+            /*文字描述区域盒子*/
             Column(){
               Text('上起点读书APP，免费看小说')
                 .fontWeight(FontWeight.Bold)
@@ -142,7 +143,7 @@ struct Index {
           .padding(10)
           .width('100%')
           .backgroundColor(Color.White)
-
+          /*新人必读区域*/
           Column(){
             Row(){
               Row() {
@@ -165,12 +166,13 @@ struct Index {
             }
             .justifyContent(FlexAlign.SpaceBetween)
             .width('100%')
-
+            /*小说展示区域*/
             Row(){
               Column(){
                 Image('https://bookcover.yuewen.com/qdbimg/349573/1040765595/180.webp')
                 Text('夜无疆')
                   .fontSize(15)
+                  .fontWeight(FontWeight.Bold)
                   .maxLines(2)
                   .textOverflow({overflow:TextOverflow.Ellipsis})
                 Text('玄幻·东方玄幻')
@@ -178,24 +180,199 @@ struct Index {
               }
               .justifyContent(FlexAlign.SpaceBetween)
               .width('23%')
+
+              Column(){
+                Image('https://bookcover.yuewen.com/qdbimg/349573/1035420986/180.webp')
+                Text('玄鉴仙族')
+                  .fontSize(15)
+                  .fontWeight(FontWeight.Bold)
+                  .maxLines(2)
+                  .textOverflow({overflow:TextOverflow.Ellipsis})
+                Text('仙侠·修真文明')
+                  .fontSize(12)
+              }
+              .justifyContent(FlexAlign.SpaceBetween)
+              .width('23%')
+
+              Column(){
+                Image('https://bookcover.yuewen.com/qdbimg/349573/1041637443/180.webp')
+                Text('捞尸人')
+                  .fontSize(15)
+                  .fontWeight(FontWeight.Bold)
+                  .maxLines(2)
+                  .textOverflow({overflow:TextOverflow.Ellipsis})
+                Text('都市·异术超能')
+                  .fontSize(12)
+              }
+              .justifyContent(FlexAlign.SpaceBetween)
+              .width('23%')
+
+              Column(){
+                Image('https://bookcover.yuewen.com/qdbimg/349573/1049457309/180.webp')
+                Text('永不独行')
+                  .fontSize(15)
+                  .fontWeight(FontWeight.Bold)
+                  .maxLines(2)
+                  .textOverflow({overflow:TextOverflow.Ellipsis})
+                Text('体育·足球运动')
+                  .fontSize(12)
+              }
+              .justifyContent(FlexAlign.SpaceBetween)
+              .width('23%')
+
+
             }
             .justifyContent(FlexAlign.SpaceBetween)
             .width('100%')
+
           }
           .margin({top:15})
           .borderRadius(15)
           .padding(15)
           .width('100%')
           .backgroundColor(Color.White)
+          /*新书强推区域*/
+          Row(){
+            Column(){
+              Image('https://imgservices-1252317822.image.myqcloud.com/coco/s06122023/55ceddb8.kaiv5j.png')
+                .width('100%')
+              Text('新书强推')
+                .fontSize(13)
+
+            }
+            .backgroundColor(Color.White)
+            .padding({bottom:10})
+            .borderRadius(12)
+            .width('23%')
+
+            Column(){
+              Image('https://imgservices-1252317822.image.myqcloud.com/coco/s06122023/b511874e.6j1mxh.png')
+                .width('100%')
+              Text('三江推荐')
+                .fontSize(13)
+
+            }
+            .backgroundColor(Color.White)
+            .padding({bottom:10})
+            .borderRadius(12)
+            .width('23%')
+
+            Column(){
+              Image('https://imgservices-1252317822.image.myqcloud.com/coco/s04282025/f45e7d56.51bb13.png')
+                .width('100%')
+              Text('真人有声书')
+                .fontSize(13)
+
+            }
+            .backgroundColor(Color.White)
+            .padding({bottom:10})
+            .borderRadius(12)
+            .width('23%')
+
+            Column(){
+              Image('https://imgservices-1252317822.image.myqcloud.com/coco/s08132025/1a7dc47e.ft16g6.png')
+                .width('100%')
+              Text('漫画')
+                .fontSize(13)
+
+            }
+            .backgroundColor(Color.White)
+            .padding({bottom:10})
+            .borderRadius(12)
+            .width('23%')
+          }
+          .justifyContent(FlexAlign.SpaceBetween)
+          .margin({top:15})
+          .width('100%')
+
+          Column(){
+            Row(){
+              Text("畅销精选")
+                .fontSize(20)
+                .fontWeight(FontWeight.Bold)
+              Text("更多>")
+                .fontSize(13)
+            }
+            .width("100%")
+            .justifyContent(FlexAlign.SpaceBetween)
+          }
+          .padding(15)
+          .backgroundColor(Color.White)
+          .borderRadius(15)
+          .margin({top:15})
+          .width('100%')
+
+          Row(){
+            Image("https://bookcover.yuewen.com/qdbimg/349573/1050208156/180.webp")
+              .width('27%')
+            Column(){
+              Text('1980潮起潮落')
+                .fontSize(20)
+                .fontWeight(FontWeight.Bold)
+              Text('【语音+手搓，无系统海边年代文、日常种田、收获海米、养丰年虫】\n' +
+                '1980年对陈海潮来说也是一个春天。\n' +
+                '家庭联产承包制还没推行，还是集体经济模式，他只能先从卖海米攒出第1桶金，然后认领闲置非耕地资源，')
+                .maxLines(2)
+                .textOverflow({overflow:TextOverflow.Ellipsis})
+              Text('都市 · 82万字')
+            }
+            .alignItems(HorizontalAlign.Start)
+            .width('73%')
+          }
+          .width('100%')
+          .backgroundColor(Color.White)
+          .borderRadius(15)
+          Row(){
+            Image("https://bookcover.yuewen.com/qdbimg/349573/1050208156/180.webp")
+              .width('27%')
+            Column(){
+              Text('1980潮起潮落')
+                .fontSize(20)
+                .fontWeight(FontWeight.Bold)
+              Text('【语音+手搓，无系统海边年代文、日常种田、收获海米、养丰年虫】\n' +
+                '1980年对陈海潮来说也是一个春天。\n' +
+                '家庭联产承包制还没推行，还是集体经济模式，他只能先从卖海米攒出第1桶金，然后认领闲置非耕地资源，')
+                .maxLines(2)
+                .textOverflow({overflow:TextOverflow.Ellipsis})
+              Text('都市 · 82万字')
+            }
+            .alignItems(HorizontalAlign.Start)
+            .width('73%')
+          }
+          .width('100%')
+          .backgroundColor(Color.White)
+          .borderRadius(15)
+
+          Row(){
+            Image("https://bookcover.yuewen.com/qdbimg/349573/1050208156/180.webp")
+              .width('27%')
+            Column(){
+              Text('1980潮起潮落')
+                .fontSize(20)
+                .fontWeight(FontWeight.Bold)
+              Text('【语音+手搓，无系统海边年代文、日常种田、收获海米、养丰年虫】\n' +
+                '1980年对陈海潮来说也是一个春天。\n' +
+                '家庭联产承包制还没推行，还是集体经济模式，他只能先从卖海米攒出第1桶金，然后认领闲置非耕地资源，')
+                .maxLines(2)
+                .textOverflow({overflow:TextOverflow.Ellipsis})
+              Text('都市 · 82万字')
+            }
+            .alignItems(HorizontalAlign.Start)
+            .width('73%')
+          }
+          .width('100%')
+          .backgroundColor(Color.White)
+          .borderRadius(15)
+
         }
       }
       .width('100%')
       .height('94%')
-      .backgroundColor(Color.Yellow)
+      .backgroundColor('#ffefecec')
     }
     .padding({ right: 15, left: 15 })
     .height('100%')
     .width('100%')
-    .backgroundColor(Color.Gray)
+    .backgroundColor('#ffefecec')
   }
 }
